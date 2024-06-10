@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Notebook</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Digital Notebook</h1>
+    </header>
+    <main>
+        <section id="noteInput">
+            <input type="text" id="noteTitle" placeholder="Note Title">
+            <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+            <input type="text" id="noteTags" placeholder="Tags (comma separated)">
+            <label for="noteCreationDate">Note Creation Date:</label>
+            <input type="date" id="noteCreationDate">
+            <label for="noteCreationTime">Note Creation Time:</label>
+            <input type="time" id="noteCreationTime">
+            <label>
+                <input type="checkbox" id="setReminder">
+                Set Reminder
+            </label>
+            <div id="reminderOptions" style="display:none;">
+                <label for="reminderDate">Reminder Date:</label>
+                <input type="date" id="reminderDate">
+                <label for="reminderTime">Reminder Time:</label>
+                <input type="time" id="reminderTime">
+            </div>
+            <button id="saveNote">Save Note</button>
+        </section>
+        <section id="notesSection">
+            <h2>Your Notes</h2>
+            <div id="notesContainer"></div>
+        </section>
+        <section id="remindersSection">
+            <h2>Reminders</h2>
+            <div id="remindersContainer"></div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
